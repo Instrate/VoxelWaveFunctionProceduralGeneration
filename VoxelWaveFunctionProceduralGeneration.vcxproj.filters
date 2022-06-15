@@ -13,10 +13,137 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Classes Files">
+      <UniqueIdentifier>{de0dbdd1-9fde-496d-a5f7-3f7030b9825c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Primitives">
+      <UniqueIdentifier>{7e3c4fc1-0ca3-49d0-a187-588b49090c7a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Common">
+      <UniqueIdentifier>{a830e940-29b7-4c6c-b7f6-4359b83c7d95}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Common\Camera">
+      <UniqueIdentifier>{8863d4e0-0c4c-4a0a-81d1-375d00f8f70f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Common\Texture">
+      <UniqueIdentifier>{b3a5d32a-c3ab-4457-99c7-5292e8521b68}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Common\Shader">
+      <UniqueIdentifier>{14fd3ef2-a874-49e5-8b52-3f51d0de1a20}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Primitives\Base">
+      <UniqueIdentifier>{75d122e8-db85-4a9b-95fc-4a8ef197e21c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Primitives\Base\Renderable">
+      <UniqueIdentifier>{4f9bdf03-49bf-4aec-aed9-6a94dc528f77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Primitives\Base\Moveable">
+      <UniqueIdentifier>{17edfe40-0cbb-48fd-b9ca-fc1a75e0602d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Primitives\Base\Transformable">
+      <UniqueIdentifier>{04f1d7c6-da01-4486-96df-474fceeb7031}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Primitives\Voxel">
+      <UniqueIdentifier>{d365fd92-3529-4a68-b615-93611628609c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Utility">
+      <UniqueIdentifier>{eccac6f6-eddb-48e5-963f-178a8f525a41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Utility\ThreadingManager">
+      <UniqueIdentifier>{f27f989f-f526-4986-ab2f-c28ad20f1a14}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Game">
+      <UniqueIdentifier>{308e3a23-963f-4aea-96bb-c99a7b557a30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Game\Window">
+      <UniqueIdentifier>{c4a0ebaf-aaa7-4eea-87fd-d83f0fa248a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Game\Logic">
+      <UniqueIdentifier>{d52a7032-baba-440d-ae90-195a44b6e5b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Game\Event">
+      <UniqueIdentifier>{62c6e0ef-b926-441d-a929-9dc1bf7d3ffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Game\Input">
+      <UniqueIdentifier>{b389b8c1-6b7e-42bc-b34d-c02811550630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Primitives\Square">
+      <UniqueIdentifier>{afc18c8c-daa5-4992-b8f1-c6ceb81171f3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Common\Path">
+      <UniqueIdentifier>{b135cd5d-b600-41a1-bc6e-5a978346f740}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Game\Window\Settings">
+      <UniqueIdentifier>{8db94e72-0a69-49ef-895c-af7e12fc072f}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Source.cpp">
+    <ClCompile Include="main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="Voxel.cpp">
+      <Filter>Classes Files\Primitives\Voxel</Filter>
+    </ClCompile>
+    <ClCompile Include="IVoxel.cpp">
+      <Filter>Classes Files\Primitives\Voxel</Filter>
+    </ClCompile>
+    <ClCompile Include="Manager.cpp">
+      <Filter>Classes Files\Utility\ThreadingManager</Filter>
+    </ClCompile>
+    <ClCompile Include="GameWindow.cpp">
+      <Filter>Classes Files\Game\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\Libraries\GLAD\glad-standard-4.5.0\src\glad.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Moveable.cpp">
+      <Filter>Classes Files\Primitives\Base\Moveable</Filter>
+    </ClCompile>
+    <ClCompile Include="Square.cpp">
+      <Filter>Classes Files\Primitives\Square</Filter>
+    </ClCompile>
+    <ClCompile Include="Shader.cpp">
+      <Filter>Classes Files\Common\Shader</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Voxel.hpp">
+      <Filter>Classes Files\Primitives\Voxel</Filter>
+    </ClInclude>
+    <ClInclude Include="IVoxel.hpp">
+      <Filter>Classes Files\Primitives\Voxel</Filter>
+    </ClInclude>
+    <ClInclude Include="Manager.h">
+      <Filter>Classes Files\Utility\ThreadingManager</Filter>
+    </ClInclude>
+    <ClInclude Include="GameWindow.h">
+      <Filter>Classes Files\Game\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="IRenderable.h">
+      <Filter>Classes Files\Primitives\Base\Renderable</Filter>
+    </ClInclude>
+    <ClInclude Include="Moveable.h">
+      <Filter>Classes Files\Primitives\Base\Moveable</Filter>
+    </ClInclude>
+    <ClInclude Include="Square.h">
+      <Filter>Classes Files\Primitives\Square</Filter>
+    </ClInclude>
+    <ClInclude Include="Shader.h">
+      <Filter>Classes Files\Common\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="EngineSettings.hpp">
+      <Filter>Classes Files\Game\Window\Settings</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="config.json">
+      <Filter>Classes Files\Game\Window</Filter>
+    </None>
+    <None Include="shaders\shader.frag">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="shaders\shader.vert">
+      <Filter>Resource Files</Filter>
+    </None>
   </ItemGroup>
 </Project>
