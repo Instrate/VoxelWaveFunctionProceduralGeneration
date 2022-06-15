@@ -76,6 +76,9 @@
     <Filter Include="Classes Files\Game\Window\Settings">
       <UniqueIdentifier>{8db94e72-0a69-49ef-895c-af7e12fc072f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes Files\Utility\FileLoader">
+      <UniqueIdentifier>{28442ca7-f457-4f64-915e-8281f663f480}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -131,8 +134,11 @@
     <ClInclude Include="Shader.h">
       <Filter>Classes Files\Common\Shader</Filter>
     </ClInclude>
-    <ClInclude Include="EngineSettings.hpp">
+    <ClInclude Include="EngineSettings.h">
       <Filter>Classes Files\Game\Window\Settings</Filter>
+    </ClInclude>
+    <ClInclude Include="FileLoader.h">
+      <Filter>Classes Files\Utility\FileLoader</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
