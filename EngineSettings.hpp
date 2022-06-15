@@ -22,10 +22,10 @@ public:
 
 
 	EngineSettings(const std::string& configFile = "/config.json") {
-		source = LoadFromFile(configFile);
+		LoadFromFile(configFile);
 	}
 
-	ptree LoadFromFile(const std::string& configFile) {
+	bool LoadFromFile(const std::string& configFile) {
 		std::string file_content = [=]()->std::string {
 			std::filesystem::path dir = std::filesystem::current_path();
 			std::string path = dir.generic_string() + configFile;
@@ -33,13 +33,11 @@ public:
 			if (file.is_open()) {
 				return std::string((std::istreambuf_iterator<char>(file)), std::istreambuf_iterator<char>());
 			}
-			return nullptr;
+			return false;
 		}();
-
-		ptree pt;
 		std::istringstream is(file_content);
-		read_json(is, pt);
-		return pt;
+		read_json(is, source);
+		return true;
 	}
 	
 	std::string PathShaderGetValue(const std::string& key) {
@@ -47,7 +45,6 @@ public:
 	}
 
 	std::vector<int> PathWindowSizeGetValue() {
-
 		return std::vector<int> {
 			source.get<int>("WINDOW.SIZE.WIDTH"),
 			source.get<int>("WINDOW.SIZE.HEIGHT")
