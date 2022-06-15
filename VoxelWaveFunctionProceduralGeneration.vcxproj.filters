@@ -79,6 +79,12 @@
     <Filter Include="Classes Files\Utility\FileLoader">
       <UniqueIdentifier>{28442ca7-f457-4f64-915e-8281f663f480}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes Files\Primitives\Base\Indexable">
+      <UniqueIdentifier>{8836398a-c66c-49da-b2bb-7bb544eef61a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Common\Material">
+      <UniqueIdentifier>{56e9898c-4f0d-4220-a643-0c0634845976}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -93,20 +99,8 @@
     <ClCompile Include="Manager.cpp">
       <Filter>Classes Files\Utility\ThreadingManager</Filter>
     </ClCompile>
-    <ClCompile Include="GameWindow.cpp">
-      <Filter>Classes Files\Game\Window</Filter>
-    </ClCompile>
     <ClCompile Include="..\..\..\Libraries\GLAD\glad-standard-4.5.0\src\glad.c">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Moveable.cpp">
-      <Filter>Classes Files\Primitives\Base\Moveable</Filter>
-    </ClCompile>
-    <ClCompile Include="Square.cpp">
-      <Filter>Classes Files\Primitives\Square</Filter>
-    </ClCompile>
-    <ClCompile Include="Shader.cpp">
-      <Filter>Classes Files\Common\Shader</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -119,19 +113,19 @@
     <ClInclude Include="Manager.h">
       <Filter>Classes Files\Utility\ThreadingManager</Filter>
     </ClInclude>
-    <ClInclude Include="GameWindow.h">
+    <ClInclude Include="GameWindow.hpp">
       <Filter>Classes Files\Game\Window</Filter>
     </ClInclude>
     <ClInclude Include="IRenderable.h">
       <Filter>Classes Files\Primitives\Base\Renderable</Filter>
     </ClInclude>
-    <ClInclude Include="Moveable.h">
+    <ClInclude Include="Moveable.hpp">
       <Filter>Classes Files\Primitives\Base\Moveable</Filter>
     </ClInclude>
-    <ClInclude Include="Square.h">
+    <ClInclude Include="Square.hpp">
       <Filter>Classes Files\Primitives\Square</Filter>
     </ClInclude>
-    <ClInclude Include="Shader.h">
+    <ClInclude Include="Shader.hpp">
       <Filter>Classes Files\Common\Shader</Filter>
     </ClInclude>
     <ClInclude Include="EngineSettings.h">
@@ -139,6 +133,18 @@
     </ClInclude>
     <ClInclude Include="FileLoader.h">
       <Filter>Classes Files\Utility\FileLoader</Filter>
+    </ClInclude>
+    <ClInclude Include="Texture.hpp">
+      <Filter>Classes Files\Common\Texture</Filter>
+    </ClInclude>
+    <ClInclude Include="Indexable.hpp">
+      <Filter>Classes Files\Primitives\Base\Indexable</Filter>
+    </ClInclude>
+    <ClInclude Include="Transformable.hpp">
+      <Filter>Classes Files\Primitives\Base\Transformable</Filter>
+    </ClInclude>
+    <ClInclude Include="Material.hpp">
+      <Filter>Classes Files\Common\Material</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

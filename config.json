@@ -1,8 +1,8 @@
 {
     "PATH":{
         "SHADER":{
-            "VERT": "../../../shaders/shader.vert",
-            "FRAG": "../../../shaders/shader.frag"
+            "VERT": "/shaders/shader.vert",
+            "FRAG": "/shaders/shader.frag"
         }
     },
 	"WINDOW":{

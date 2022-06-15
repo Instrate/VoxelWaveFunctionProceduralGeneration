@@ -16,9 +16,7 @@
 
 class Shader {
 private:
-	
-	GLint Handle;
-	
+
 	std::map<std::string, int> _uniformLocations;
 
 	// TODO: make correct error proccessing
@@ -52,6 +50,8 @@ private:
 	}
 
 public:
+
+	GLint Handle;
 
 	Shader(const std::string& vertPath, const std::string& fragPath) {
 
@@ -91,6 +91,10 @@ public:
 			glGetActiveUniform(Handle, (GLint)uniform, bufsize, &len, &size, &type, name);
 			_uniformLocations.insert(std::pair(name, uniform));
 		}
+	}
+
+	void Use() const {
+		glUseProgram(Handle);
 	}
 
 	void SetInt(const std::string& name, int data) const {

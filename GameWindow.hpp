@@ -11,7 +11,7 @@
 #include <boost/json.hpp>
 
 #include "Manager.h"
-#include "Shader.h"
+#include "Shader.hpp"
 
 #include "EngineSettings.h"
 
@@ -45,7 +45,6 @@ public:
 		if (!Init()) {
 			return false;
 		}
-
 		
 
 		shader = new Shader(
