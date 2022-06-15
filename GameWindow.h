@@ -1,4 +1,6 @@
 #pragma once
+#define GLEW_STATIC
+
 #include <vector>
 #include <string>
 #include <functional>
@@ -11,7 +13,7 @@
 #include "Manager.h"
 #include "Shader.h"
 
-#include "EngineSettings.hpp"
+#include "EngineSettings.h"
 
 class GameWindow {
 private:
@@ -30,34 +32,33 @@ public:
 
 	GLFWwindow* window;
 
-	GameWindow(
-		std::string name = "Window",
-		std::vector<int> size = { 800, 600 }
-	) {
+	GameWindow() {
 		settings = new EngineSettings();
-
+		
 		SettingsReset();
 	}
 
 	bool SettingsReset() {
-
 		this->size = settings->PathWindowSizeGetValue();
 		this->name = settings->PathWindowNameGetValue();
+
+		if (!Init()) {
+			return false;
+		}
+
+		
 
 		shader = new Shader(
 			settings->PathShaderGetValue("VERT"),
 			settings->PathShaderGetValue("FRAG")
 		);
+
 		return true;
 	}
 
 	bool Init(bool isFullScreen = false) {
-		
-		if (!glfwInit())
-			return false;
 
-		glewExperimental = GL_TRUE;
-		//glewInit(); // not needed
+		glfwInit();
 
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 4);
 		glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 5);
@@ -66,7 +67,6 @@ public:
 		glfwWindowHint(GLFW_OPENGL_FORWARD_COMPAT, GL_TRUE);
 
 		glfwWindowHint(GLFW_RESIZABLE, GL_FALSE);
-
 
 		window = glfwCreateWindow(
 			size[0],
@@ -82,9 +82,10 @@ public:
 			return false;
 		}
 
+		glfwMakeContextCurrent(window);
 
-
-
+		glewExperimental = GL_TRUE;
+		glewInit();
 
 		return true;
 	}
@@ -106,25 +107,13 @@ public:
 
 
 	void Run() {
-		glfwMakeContextCurrent(window);
-		//std::thread tRender(
-		//	[&]() {
-		//		Render();
-		//	}
-		//);
-		//tRender.join();
 		
-		//threads.factory.push_back(tRender);
 
 		while (!ShouldTerminate()) {
 			
-
-
-			//threads.factory[0].join();
 			
 			Render();
 		}
-
 	}
 
 	bool ShouldTerminate() {
