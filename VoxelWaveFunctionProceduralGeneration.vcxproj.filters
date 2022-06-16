@@ -85,6 +85,21 @@
     <Filter Include="Classes Files\Common\Material">
       <UniqueIdentifier>{56e9898c-4f0d-4220-a643-0c0634845976}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes Files\Primitives\Base\DefaultData">
+      <UniqueIdentifier>{73292dfa-0369-448b-8869-7e42292a091b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine">
+      <UniqueIdentifier>{30e6eda1-1ef3-4f41-a98a-f15238dd8c8f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\World">
+      <UniqueIdentifier>{f317f882-86c8-4816-a974-33e8849c6dca}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\World\Landscape">
+      <UniqueIdentifier>{8e1937d8-2cf1-4077-b6f5-fca780814c91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\Model">
+      <UniqueIdentifier>{550bd2ca-d38a-43dc-b455-e2286227902d}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -145,6 +160,24 @@
     </ClInclude>
     <ClInclude Include="Material.hpp">
       <Filter>Classes Files\Common\Material</Filter>
+    </ClInclude>
+    <ClInclude Include="DefaultData.hpp">
+      <Filter>Classes Files\Primitives\Base\DefaultData</Filter>
+    </ClInclude>
+    <ClInclude Include="World.hpp">
+      <Filter>Classes Files\Engine\World</Filter>
+    </ClInclude>
+    <ClInclude Include="Landspace.hpp">
+      <Filter>Classes Files\Engine\World\Landscape</Filter>
+    </ClInclude>
+    <ClInclude Include="Model.hpp">
+      <Filter>Classes Files\Engine\Model</Filter>
+    </ClInclude>
+    <ClInclude Include="Camera.hpp">
+      <Filter>Classes Files\Common\Camera</Filter>
+    </ClInclude>
+    <ClInclude Include="CameraControl.hpp">
+      <Filter>Classes Files\Game\Input</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

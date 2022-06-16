@@ -150,20 +150,26 @@
     <ClCompile Include="Voxel.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Camera.hpp" />
+    <ClInclude Include="CameraControl.hpp" />
+    <ClInclude Include="DefaultData.hpp" />
     <ClInclude Include="EngineSettings.h" />
     <ClInclude Include="FileLoader.h" />
     <ClInclude Include="GameWindow.hpp" />
     <ClInclude Include="Indexable.hpp" />
     <ClInclude Include="IRenderable.h" />
     <ClInclude Include="IVoxel.hpp" />
+    <ClInclude Include="Landspace.hpp" />
     <ClInclude Include="Manager.h" />
     <ClInclude Include="Material.hpp" />
+    <ClInclude Include="Model.hpp" />
     <ClInclude Include="Moveable.hpp" />
     <ClInclude Include="Shader.hpp" />
     <ClInclude Include="Square.hpp" />
     <ClInclude Include="Texture.hpp" />
     <ClInclude Include="Transformable.hpp" />
     <ClInclude Include="Voxel.hpp" />
+    <ClInclude Include="World.hpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="config.json" />
