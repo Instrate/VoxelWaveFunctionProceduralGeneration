@@ -9,29 +9,27 @@
 class Moveable : public IRenderable {
 protected:
 
+	glm::vec3 color = glm::vec3(1);
+
 	glm::mat4 transform = glm::mat4(1.0f);
 	glm::mat4 originShift = glm::mat4(1.0f);
 
 
-	virtual void bindObject() = NULL;
+	virtual void BindObject() = NULL;
 	
-	virtual void renderObject(const Shader& shader, GLenum mode) = NULL;
+	virtual void renderObject(const Shader& shader, const GLenum& mode) const = NULL;
 
 	virtual void prepareRendering(const Shader& shader) {
 		GLint uniformLoc = glGetUniformLocation(shader.Handle, "transform");
 		glUniformMatrix4fv(uniformLoc, 1, false, (GLfloat*)&transform[0]);
 	}
 
-	/*virtual void PlaceObject(const glm::vec3& pos) {
-		
-	}*/
-
 public:
 	bool isEnabled = false;
 
 	glm::vec3 position = glm::vec3(0.0f);
 
-	virtual void Move(glm::vec3 shifts) {
+	virtual void Move(const glm::vec3& shifts) {
 		position += shifts;
 		originShift += glm::translate(glm::mat4(1.0f), shifts);
 		
@@ -39,7 +37,7 @@ public:
 	}
 
 	virtual void TransformCombine() {
-		transform *= originShift;
+		transform = originShift;
 	}
 
 	virtual void TransformClean() {
@@ -55,6 +53,4 @@ public:
 	}
 
 	virtual ~Moveable() = default;
-
-
 };
