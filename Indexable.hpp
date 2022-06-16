@@ -4,13 +4,7 @@
 
 class Indexable {
 protected:
-
-	GLfloat* vertices;
-
-	GLint offset;
-
-	GLint VBO;
-	GLint VAO;
-	GLint EBO;
-
+	GLuint VBO;
+	GLuint VAO;
+	GLuint EBO;
 };
