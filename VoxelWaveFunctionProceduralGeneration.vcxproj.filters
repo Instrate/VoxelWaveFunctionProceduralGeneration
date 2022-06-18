@@ -52,29 +52,11 @@
     <Filter Include="Classes Files\Utility\ThreadingManager">
       <UniqueIdentifier>{f27f989f-f526-4986-ab2f-c28ad20f1a14}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Classes Files\Game">
-      <UniqueIdentifier>{308e3a23-963f-4aea-96bb-c99a7b557a30}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes Files\Game\Window">
-      <UniqueIdentifier>{c4a0ebaf-aaa7-4eea-87fd-d83f0fa248a6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes Files\Game\Logic">
-      <UniqueIdentifier>{d52a7032-baba-440d-ae90-195a44b6e5b3}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes Files\Game\Event">
-      <UniqueIdentifier>{62c6e0ef-b926-441d-a929-9dc1bf7d3ffb}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes Files\Game\Input">
-      <UniqueIdentifier>{b389b8c1-6b7e-42bc-b34d-c02811550630}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Classes Files\Primitives\Square">
       <UniqueIdentifier>{afc18c8c-daa5-4992-b8f1-c6ceb81171f3}</UniqueIdentifier>
     </Filter>
     <Filter Include="Classes Files\Common\Path">
       <UniqueIdentifier>{b135cd5d-b600-41a1-bc6e-5a978346f740}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Classes Files\Game\Window\Settings">
-      <UniqueIdentifier>{8db94e72-0a69-49ef-895c-af7e12fc072f}</UniqueIdentifier>
     </Filter>
     <Filter Include="Classes Files\Utility\FileLoader">
       <UniqueIdentifier>{28442ca7-f457-4f64-915e-8281f663f480}</UniqueIdentifier>
@@ -100,6 +82,33 @@
     <Filter Include="Classes Files\Engine\Model">
       <UniqueIdentifier>{550bd2ca-d38a-43dc-b455-e2286227902d}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Classes Files\Engine\World\Game">
+      <UniqueIdentifier>{308e3a23-963f-4aea-96bb-c99a7b557a30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\World\Game\Window">
+      <UniqueIdentifier>{c4a0ebaf-aaa7-4eea-87fd-d83f0fa248a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\World\Game\Window\Settings">
+      <UniqueIdentifier>{8db94e72-0a69-49ef-895c-af7e12fc072f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\World\Game\Logic">
+      <UniqueIdentifier>{d52a7032-baba-440d-ae90-195a44b6e5b3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\World\Game\Event">
+      <UniqueIdentifier>{62c6e0ef-b926-441d-a929-9dc1bf7d3ffb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\World\Game\Input">
+      <UniqueIdentifier>{b389b8c1-6b7e-42bc-b34d-c02811550630}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\Main">
+      <UniqueIdentifier>{8443f1b9-ec60-4fe1-8d4a-4faa6a2cae6a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\World\Game\Entity">
+      <UniqueIdentifier>{604ccd77-f219-4385-9dd5-4aaeb1f8b284}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Classes Files\Engine\World\Game\Entity\Player">
+      <UniqueIdentifier>{4e6d695a-927a-42d5-bb02-55d3b5f14aba}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp">
@@ -114,8 +123,17 @@
     <ClCompile Include="Manager.cpp">
       <Filter>Classes Files\Utility\ThreadingManager</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\Libraries\GLAD\glad-standard-4.5.0\src\glad.c">
-      <Filter>Source Files</Filter>
+    <ClCompile Include="Texture.cpp">
+      <Filter>Classes Files\Common\Texture</Filter>
+    </ClCompile>
+    <ClCompile Include="FileLoader.cpp">
+      <Filter>Classes Files\Utility\FileLoader</Filter>
+    </ClCompile>
+    <ClCompile Include="Engine.cpp">
+      <Filter>Classes Files\Engine\Main</Filter>
+    </ClCompile>
+    <ClCompile Include="EngineSettings.cpp">
+      <Filter>Classes Files\Engine\World\Game\Window\Settings</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -129,7 +147,7 @@
       <Filter>Classes Files\Utility\ThreadingManager</Filter>
     </ClInclude>
     <ClInclude Include="GameWindow.hpp">
-      <Filter>Classes Files\Game\Window</Filter>
+      <Filter>Classes Files\Engine\World\Game\Window</Filter>
     </ClInclude>
     <ClInclude Include="IRenderable.h">
       <Filter>Classes Files\Primitives\Base\Renderable</Filter>
@@ -144,12 +162,12 @@
       <Filter>Classes Files\Common\Shader</Filter>
     </ClInclude>
     <ClInclude Include="EngineSettings.h">
-      <Filter>Classes Files\Game\Window\Settings</Filter>
+      <Filter>Classes Files\Engine\World\Game\Window\Settings</Filter>
     </ClInclude>
     <ClInclude Include="FileLoader.h">
       <Filter>Classes Files\Utility\FileLoader</Filter>
     </ClInclude>
-    <ClInclude Include="Texture.hpp">
+    <ClInclude Include="Texture.h">
       <Filter>Classes Files\Common\Texture</Filter>
     </ClInclude>
     <ClInclude Include="Indexable.hpp">
@@ -177,12 +195,21 @@
       <Filter>Classes Files\Common\Camera</Filter>
     </ClInclude>
     <ClInclude Include="CameraControl.hpp">
-      <Filter>Classes Files\Game\Input</Filter>
+      <Filter>Classes Files\Engine\World\Game\Input</Filter>
+    </ClInclude>
+    <ClInclude Include="Engine.hpp">
+      <Filter>Classes Files\Engine\Main</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity.h">
+      <Filter>Classes Files\Engine\World\Game\Entity</Filter>
+    </ClInclude>
+    <ClInclude Include="Player.h">
+      <Filter>Classes Files\Engine\World\Game\Entity\Player</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="config.json">
-      <Filter>Classes Files\Game\Window</Filter>
+      <Filter>Classes Files\Engine\World\Game\Window</Filter>
     </None>
     <None Include="shaders\shader.frag">
       <Filter>Resource Files</Filter>
